@@ -21,7 +21,7 @@ from fastapi import UploadFile, File, Form
 @app.post("/kg")
 async def get_kg(
     image: UploadFile = File(None, description="Hình ảnh cây trồng cần chẩn đoán"),
-    text: str = Form(None, description="Mô tả triệu chứng của cây trồng")
+    text: str = Form(None, description="Mô tả triệu chứng của cây  trồng")
 ):
     if image:
         content = await image.read()
