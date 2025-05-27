@@ -58,10 +58,8 @@ class CLIPModule:
 
             image_tensor = transform(image_input)
         else:
-            # Giả định image_input là tensor đã transform
             image_tensor = image_input
 
-        # Đảm bảo tensor có batch dimension
         if image_tensor.dim() == 3:
             image_tensor = image_tensor.unsqueeze(0)
 

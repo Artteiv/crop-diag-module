@@ -9,6 +9,11 @@ from pyvi.ViTokenizer import tokenize
 import faiss
 import numpy as np
 
+"""
+Script này thực hiện lấy các entity từ neo4j từ xa về và tạo ra các data lưu trong sqlite, đồng thời tạo các embeddings
+dựa trên từng row.
+"""
+
 # Kết nối SQLite
 VECTOR_EMBEDDINGS_DB_PATH = 'app/data/vector_embeddings.db'
 FAISS_INDEX_PATH = 'app/data/faiss_index.index'
